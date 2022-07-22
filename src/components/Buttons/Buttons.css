@@ -1,0 +1,18 @@
+.buttons_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 50px 20px 50px;
+}
+
+.btn {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  transition: ease-out;
+}
+
+.btn:hover {
+  transform: scale(1.25);
+}

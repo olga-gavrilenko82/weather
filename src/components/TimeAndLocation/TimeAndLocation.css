@@ -1,0 +1,19 @@
+.time_conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time_text {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.location_text {
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 10px;
+}

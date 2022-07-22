@@ -1,0 +1,37 @@
+.input_conteiner {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input {
+  box-shadow: 5px;
+  text-transform: capitalize;
+  border-radius: 3px;
+  padding-left: 5px;
+  margin-right: 20px;
+  width: 350px;
+  height: 30px;
+}
+
+.input::placeholder {
+  text-transform: lowercase;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.input_icons {
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: ease-out;
+}
+
+.input_icons:hover {
+  transform: scale(1.25);
+}
