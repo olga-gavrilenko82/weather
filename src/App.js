@@ -9,24 +9,22 @@ import getFormattedWeatherData from './services/weatherService'
 
 function App() {
   const [query, setQuery] = useState({ q: 'mogilev' })
-  const [units, setUnits] = useState('metric')
   const [weather, setWeather] = useState(null)
 
   useEffect(() => {
     const fetchWeather = async () => {
-      await getFormattedWeatherData({ ...query, units }).then((data) => {
+      await getFormattedWeatherData({ ...query }).then((data) => {
         setWeather(data)
       })
     }
 
     fetchWeather()
-  }, [query, units])
+  }, [query])
 
   const formatBackground = () => {
     if (!weather)
       return "bg-[url('https://i.jauns.lv/t/2022/06/15/2622220/480x345.webp?v=1655269913')]"
-    const threshold = units === 'metric' ? 25 : 40
-    if (weather.temp <= threshold)
+    if ((weather.temp - 273.15) < 25)
       return "bg-[url('https://i.jauns.lv/t/2022/06/15/2622220/480x345.webp?v=1655269913')]"
     return "bg-[url('https://media.istockphoto.com/videos/sunlight-bright-orange-background-loop-video-id1208063775?s=640x640')] "
   }

@@ -14,11 +14,11 @@ function TemperatureAndDetails({
 
       <div className="current__weather_container">
         <div className="current_weather">
-          <img src={iconUrlFromCode(icon)} />
+          <img src={iconUrlFromCode(icon)} alt="iconUrlFromCode" />
         </div>
         <div className="current_weather">
           <p className="current__weather_text">
-            {`${temp.toFixed()}°C`} 
+            {`${(temp - 273.15).toFixed()}°C`}
           </p>
         </div>
 
@@ -26,7 +26,7 @@ function TemperatureAndDetails({
           <div className="current__weather_details">
             <UilTemperature />
             Real fell: &nbsp;
-            <span className="span">{`${feels_like.toFixed()}°C`}</span>
+            <span className="span">{`${(feels_like - 273.15).toFixed()}°C`}</span>
           </div>
           <div className="current__weather_details">
             <UilTear />
@@ -35,8 +35,8 @@ function TemperatureAndDetails({
           </div>
           <div className="current__weather_details">
             <UilWind />
-            Wind: &nbsp; 
-            <span className="span">{`  ${speed.toFixed()} km/h`}</span>
+            Wind: &nbsp;
+            <span className="span">{`${speed.toFixed()} km/h`}</span>
           </div>
         </div>
       </div>

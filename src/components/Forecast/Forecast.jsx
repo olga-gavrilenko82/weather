@@ -15,7 +15,7 @@ function Forecast({ title, items }) {
           <div key={index} className="component_card">
             <p className="time">{item.title}</p>
             <img src={iconUrlFromCode(item.icon)} alt="iconUrlFromCode" />
-            <p className="temp">{`${item.temp.toFixed()}°C`}</p>
+            <p className="temp">{`${(item.temp - 273.15).toFixed()}°C`}</p>
           </div>
         ))}
       </div>

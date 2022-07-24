@@ -7,6 +7,7 @@ function Inputs({ setQuery }) {
 
   const handleSearchClick = () => {
     if (city !== '') setQuery({ q: city })
+    
   }
 
   const handleLocationClick = () => {
